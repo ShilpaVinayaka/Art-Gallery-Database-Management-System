@@ -1,0 +1,87 @@
+/*CSS Reset */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Fondamento', cursive;
+ /*   font-family: 'Langar', cursive;*/
+ font-family: 'Acme', sans-serif;
+}
+.h-primary-exhibition {
+    font-size: 3rem;
+    padding: 15px;
+    margin: 10px;
+    margin-top: 200px;
+    color: #cc1351;
+}
+#ExhibitionPage{
+    justify-content: center; 
+    align-items: center;
+    padding: 65px 189px 150px;
+    height: 165px;
+
+}
+#ExhibitionPage::before{
+    content: "";
+   background: url('../Apics/exhi.jpg') no-repeat center/cover;
+ /* background-color: blueviolet;*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 60%;
+    width: 100%;
+    z-index: -2;                    /* Places div contents over bgcolor */
+    opacity: 1;           
+
+}
+
+.exhibition-details{
+    padding: 0px 50px;
+    padding-left: 80px;
+      height:100%;
+      background-color: aliceblue;
+
+}
+#exhibi-bg{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3,auto);
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 3.5rem;
+
+
+}
+.exhibition-details .box3-1{
+    border: 3px solid rgb(13, 14, 99);
+
+    border-radius: 10px;
+
+}
+.exhibition-details #box3{
+    display: block;
+    border-radius: 17px;
+    padding: 29px 20px 12px 20px;
+    border-radius: 7px;
+    background-color: rgb(255, 255, 255); 
+    width: 95%;
+    background-color: aliceblue;
+
+    margin: auto;
+}
+.exhibition-details #box3 img{
+    display: block;
+    margin: auto;
+    height: 500px;
+    padding-bottom: 10px;
+    float: right;
+    width: 800px;
+    background-color: aliceblue;
+
+}
+
+#box3 p{
+    color: #000000;
+    padding: 4px;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+

@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Fondamento', cursive;
+    font-family: 'Acme', sans-serif;
+}
+
+/* Signup html */
+#customer-details::before{
+    content: "";
+    background: url('../Apics/bg4.jpg') no-repeat center center/cover;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;                    /* Places div contents over bgcolor */
+    opacity: 0.95;
+}
+
+.customer-container{
+    display: block;
+    margin: 5px auto;
+  /*  border:2px solid rgb(153, 15, 153);
+    background-color: rgb(153, 15, 153);*/
+    padding: 45px 20px;
+    padding-bottom: 20px;
+    width: 500px;
+    border-radius: 17px;
+}
+.customer-container h1{
+    text-align: center;
+    font-size: 3rem;
+    color: whitesmoke;
+}
+
+.custdet input{
+    
+    border: 2px solid white;    
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    width: 450px;
+    padding: 6px;
+    border-radius: 7px;
+    margin: 15px auto;
+
+}
+.custdet-gender {   /*gender block*/
+    border: 2px solid white;
+    background-color: white;    
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    width: 450px;
+    padding: 6px;
+    border-radius: 7px;
+    margin: 5px auto;
+    color: grey;
+}
+
+
+.btncust-submit{        /*submit button*/
+    display: block;
+    padding: 3px 15px;
+    border:2px solid rgb(54, 185, 37);
+    color: white;
+    margin: 10px auto;
+    background-color:rgb(54, 185, 37);
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.custdet a{
+    text-decoration: none;
+
+}
+.custdet{
+    
+
+}
+
+.mar{   /*Marquee block */
+    padding: 2px ;
+    background-color: plum;
+    margin: 0px;
+}

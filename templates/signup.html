@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up | Hosabelaku</title>
+    <link rel="shortcut icon" type="image" href="{% static 'Apics/title.jpg' %}">
+
+    <link rel="stylesheet" href="{% static 'Styles/art.css' %}">
+    <link rel="stylesheet" href="{% static 'Styles/signup.css' %}">
+    <!--link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+    <section id="newaccount">
+        <div id="logo">
+            <!--Logo-->
+            <a href="login.html"><img src="{% static 'Apics/logo2.jpg' %}" alt="Hosabelaku Art Gallery" width="140px"
+                    height="140px"> </a>
+        </div>
+        <div class="signup-container">
+            <h1>Create a New Account</h1>
+            <hr>
+            <form action="signup.html" method="POST">
+                {% csrf_token %}
+                <div class="signingup"> <input type="text" name="first_name" placeholder="First Name" required>
+                    <input type="text" name="last_name" placeholder="Surname" required>
+                </div>
+                <div class="signingup"> <input type="text" name="username"  placeholder="Create Username">
+                </div>
+                <div class="signingup"> <input type="email" name="email"  placeholder="Enter email address"
+                        required></div>
+                <div class="signingup"> <input type="password" name="password1" placeholder="Create Password">
+                </div>
+                <div class="signingup"> <input type="password" name="password2" placeholder="Confirm Password">
+                </div>
+
+                <p>By clicking SignUp, you are agreeing to the <span>terms, cookie policy and data policy </span>
+                    You may recieve SMS notification from us and can opt out at anytime
+                </p>
+                <div class="signingup">
+                    <a href="index.html"><button class="btnsignup">Sign Up</button> </a>
+                </div>
+                <div class="login"> 
+                    <p>Already a user?
+                        <a href="login.html">Log In</a>
+                    </p>
+                </div>
+
+
+            </form>
+
+        </div>
+        <div class="mar">
+            <marquee behavior="" direction="left" onmouseover="stop()" onmouseout="start()">Hosabelaku Art
+                Gallery | Exhibition | Artworks on sale
+                with Amazing offers</marquee>
+        </div>
+    </section>
+
+    {% for message in messages %}
+      <script>  
+          alert("{{ message }}")
+      </script>
+   
+    {% endfor %}
+</body>
+
+
+</html>

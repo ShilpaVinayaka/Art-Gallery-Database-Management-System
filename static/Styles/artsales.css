@@ -1,0 +1,104 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Fondamento', cursive;
+    font-family: 'Acme', sans-serif;
+}
+
+
+/*art sales*/
+.h-primary-artsales {
+    font-size: 2.7rem;
+    padding: 15px;
+    margin: 15px;
+    color: #cc1351;
+}
+#artsales{
+    /*  font-size: x-large; */
+    justify-content: center; 
+    align-items: center;
+     padding: 65px 189px;
+      height: 165px;
+}
+  #artsales::before{
+    content: "";
+    background: url('../Apics/artsales.jpg') no-repeat center center/cover;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;                    /* Places div contents over bgcolor */
+    opacity: 0.48;           
+}
+#artsales h1{                                /*Artsales bar */
+    text-align: center;
+}
+#artsales p{
+    color: #3f0e80;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#artsales-art-grid{                       /*contents in art box*/
+    display: grid;
+    grid-template-columns: repeat(3,4fr);
+    grid-template-rows: repeat(7,4fr);
+    grid-column-gap: 0.2rem;
+    grid-row-gap: 0.5rem;
+}  
+#artsales-art-grid .box1{
+    display: block;    
+    border-radius: 17px;
+    padding: 29px 20px 12px 20px;
+    border-radius: 7px;
+    background-color: rgb(255, 255, 255); 
+    width: 78%;
+    margin: auto;
+
+}
+#artsales-art-grid .box1 img{
+    display: block;
+    margin: auto;
+    height: 200px;
+    padding-bottom: 10px;
+    transition: transform .25s ease-in-out;
+}
+#artsales-art-grid .box1 p{
+    text-align: center;
+}
+#artsales-art-grid .box1 a{
+    text-decoration: none;
+
+}
+#artsales-art-grid .box1 a:hover{
+    font-weight: bold;
+}
+.artsalesbtn .btnA1{                          /* Add to cart button*/
+    display: inline-block;
+    padding: 3px 6px;
+    border:2px solid rgb(40, 21, 207);
+    color: white;
+    margin: 12px 36px ;
+    background-color:rgb(40, 21, 207);
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.artsalesbtn .btnA2{                            /*Buy now button */
+    padding: 3px 6px ;
+    border:2px solid rgb(54, 185, 37);
+    color: white;
+    margin: 12px ;
+    background-color:rgb(54, 185, 37);
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+.artsales-container{
+    padding: 50px 100px;
+    height: 50%;
+}

@@ -1,0 +1,88 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibition| Hosabelaku</title>
+    <link rel="shortcut icon" type="image" href="{% static 'Apics/title.jpg' %}">
+
+    <link rel="stylesheet" href="{% static 'Styles/art.css' %}">
+    <link rel="stylesheet" href="{% static 'Styles/exhibition.css' %}">
+    <!--  <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet"> 
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <!--Logo-->
+            <img src="{% static 'Apics/logo2.jpg' %}" alt="Hosabelaku Art Gallery" width="85px" height="85px">
+        </div>
+        <ul>
+            <!--Navbar Elements-->
+            <li class="item"><a href="index.html" class="">Home</a></li>
+            <li class="item"><a href="artsales.html">Art Sales</a></li>
+            <li class="item"><a href="exhibition.html">Exhibition</a></li>
+            <li class="item"><a href="service.html">Customer Service</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+
+            <a href="cart.html">
+               <img id="cart-icon" src="{% static 'Apics/cart.png' %}" height="40px" width="40px"> </a>
+       
+            <a href="login.html"> <button class="btn">Logout</button></a> 
+
+       </div>
+
+    </nav>
+    <section id="ExhibitionPage">
+        <h1 class="h-primary-exhibition center">Exhibition Details </h1>
+    </section>
+    <section class="exhibition-details">
+        <div id="exhibi-bg">
+
+            {% for exhi in exhibi %}
+            <div class="box3-1" id="box3">
+                <p><b>Year:</b> {{exhi.e_year}}</p>
+                <p><b>Exhibition Name:</b> {{exhi.e_name}}</p>
+                <p><b>Exhibition Theme:</b> {{exhi.e_type}}</p>
+                <p><b>Start Date:</b> {{exhi.s_date}}</p>
+                <p><b>End Date:</b> {{exhi.e_date}}</p>
+                <p><b>Gallery Name:</b>{{exhi.gallery_name}}</p>
+                <p><b>Venue:</b> {{exhi.elocation}}</p><br>
+                <p> {{exhi.desc}}</p>
+
+            </div>
+            <div id="box3">
+
+                <img src="{{exhi.e_img.url}}" alt="">
+            </div>
+            {% endfor %}
+        </div>
+
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.hosabelakuArt.com. All rights reserved!
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

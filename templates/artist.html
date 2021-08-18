@@ -1,0 +1,131 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist | Hosabelaku ArtGallery</title>
+    <link rel="shortcut icon" type="image" href="{% static 'Apics/title.jpg' %}">
+
+    <link rel="stylesheet" href="{% static 'Styles/art.css' %}">
+    <link rel="stylesheet" href="{% static 'Styles/artist.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+    integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+    crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <!--Logo-->
+            <img src="{% static 'Apics/logo2.jpg' %}" alt="Hombelaku Art Gallery" width="85px" height="85px">
+        </div>
+        <ul>
+            <!--Navbar Elements-->
+            <li class="item"><a href="index.html">Home</a></li>
+            <li class="item"><a href="artsales.html">Art Sales</a></li>
+            <li class="item"><a href="exhibition.html">Exhibition</a></li>
+            <li class="item"><a href="#">Customer Service</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+
+            <a href="cart.html">
+               <img id="cart-icon" src="{% static 'Apics/cart.png' %}" height="40px" width="40px"> </a>
+       
+            <a href="login.html"> <button class="btn">Logout</button></a> 
+
+       </div>
+
+
+    </nav>
+    <section id="artist-details">
+        <div class="artist-heading">
+            <a class="navbar-brand" href="#!">ARTISTS</a>
+        </div>
+        <div class="artistbox">
+            <img src="{% static 'Apics/anish.jpg' %}" class="align-self-start mr-3" alt="...">
+            <div class="media-body">
+                <h2 >Anish Kapoor</h2>
+                <p>Cir Anish Kapoor CBE, RA (born 12 March 1954) is a British Indian[2] sculptor specializing in
+                    installation art and conceptual art. Born in Mumbai,[3][4] Kapoor has lived and worked in London
+                    since the early 1970s when he moved to study art, first at the Hornsey College of Art and later at
+                    the Chelsea School of Art and Design.
+                    Kapoor represented Britain at the XLIV Venice Biennale in 1990, when he was awarded the Premio
+                    Duemila Prize. In 1991, he received the Turner Prize and in 2002 received the Unilever Commission
+                    for the Turbine Hall at Tate Modern. His notable public sculptures include Cloud Gate (2006,
+                    colloquially known as "the Bean") in Chicago's Millennium Park; Sky Mirror, exhibited at the
+                    Rockefeller Center in New York City in 2006 and Kensington Gardens in London in 2010;[5] Temenos, at
+                    Middlehaven, Middlesbrough; Leviathan,[6] at the Grand Palais in Paris in 2011; and ArcelorMittal
+                    Orbit, commissioned as a permanent artwork for London's Olympic Park and completed in 2012.[7] In
+                    2017 Kapoor designed the statuette for the 2018 Brit Awards.[8]</p>
+            </div>
+        </div>
+        <div class="artistbox">
+            <img src="{% static 'Apics/Sakthi.jpg' %}" class="align-self-start mr-3" alt="...">
+            <div class="media-body">
+                <h2>Sakthi Burman</h2>
+                <p>Sakti Burman (born 1935 in Kolkata) is a contemporary Indian artist of Indian parentage living in
+                    France. (His name has also been spelled Shakti, Shakthi, and Sakthi.)
+                    He grew up in what is now Bangladesh, British India. He has lived in France for the last five
+                    decades, while maintaining strong ties with India, where he regularly exhibits his works. He is
+                    married to French painter Maite Delteil.[1] His extended family includes several eminent artists:
+                    his daughter, Maya Burman also lives and works in France; his niece, Jayasri Burman was inspired by
+                    him and is a notable artist in her own right; as is his niece's husband, Paresh Maity. He has had
+                    several exhibitions of his work in India, and elsewhere, and won several prizes. He has a large
+                    extended family.A painter and lithographer, Burman's art has mythic and fantasy content and rich
+                    colors..</p>
+            </div>
+        </div>
+        <div class="artistbox">
+            <img src="{% static 'Apics/Krishnenn.jpg' %}" class="align-self-start mr-3" alt="...">
+            <div class="media-body">
+                <h2>Krishnen Khanna</h2>
+                <p>Krishen Khanna (born 1925) is an Indian artist born in Lyallpur[1] (now Faislabad, Pakistan). He
+                    attended Imperial Service College in England and is a self-taught artist.[2] He is recipient of the
+                    Rockefeller Fellowship in 1962, the Padma Shri in 1990, and the Padma Bhushan in 2011.[3]
+                    In 1938 Khanna travelled from Bombay to Britain on RMS Strathmore.[4] After attending the Imperial
+                    Service College from 1938 to 1942, Khanna enrolled at Government College, Lahore, from 1942 to 1944.
+                    In 1946 he started working with Grindlays Bank for 14 years. In 1961 he resigned from the bank and
+                    devoted his full-time to art.[5]
+            </div>
+        </div>
+        <div class="artistbox">
+            <img src="{% static 'Apics/atul.jpg' %}" class="align-self-start mr-3" alt="...">
+            <div class="media-body">
+                <h2>Atul Dodiya</h2>
+                <p>Atul began exhibiting and selling his work in the early 1980s following his graduation from Sir J. J.
+                    School of Art in Mumbai where he received a Bachelor of Fine Arts degree. He furthered his academic
+                    training at the École des Beaux-Arts in Paris from 1991 to 1992 subsequent to a scholarship awarded
+                    by the French Government.
+                    Atul has had several solo shows in India and exhibited at 'Reflections and Images' Vadehra Art
+                    Gallery, New Delhi and Mumbai, 1993 and 'Trends and Images' CIMA, Calcutta, 1993. Outside India, he
+                    has exhibited at Gallery Apunto, Amsterdam in 1993, participated in 'The Richness of the Spirit'
+                    Kuwait and Rome in 1986–89, 'India - Contemporary Art' World Trade Center, Amsterdam 1989,
+                    'Exposition Collective' Cite Internationale Des Arts, Paris 1992.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

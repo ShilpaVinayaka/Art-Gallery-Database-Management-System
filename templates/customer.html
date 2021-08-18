@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details</title>
+    <link rel="shortcut icon" type="image" href="{% static 'Apics/title.jpg' %}">
+
+    <link rel="stylesheet" href="{% static 'Styles/customer.css' %}">
+    <link rel="stylesheet" href="{% static 'Styles/art.css' %}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <section id="customer-details">
+        <div class="customer-container">
+            <h1>Customer details</h1>
+            <hr>
+            <form action="customer.html" method="POST">
+      <!--          {% csrf_token %}
+                <div>
+                <div class="custdet"> <input type="number" name="id" placeholder="Enter ID" required>
+                
+
+                <input type="text" name="name" placeholder="Name" required>
+                </div> </div>
+                <div class="custdet"> <input type="number" name="phonenumber" placeholder="Phone Number" required>
+                </div>
+                <div class="custdet"> <input type="email" name="email" placeholder="Enter email address" required>
+                </div>
+                <div class="custdet"> <input type="text" name="address" placeholder="Enter Address" required>
+                </div>
+                <div class="custdet"> <input type="text" name="city" placeholder="City" required>
+                </div>
+                <div class="custdet"> <input type="number" name="pincode" placeholder="Pin Code" required>
+                </div>
+
+           <div class="custdet-gender"> 
+                    Payment Method
+                    <div> <input type="radio" name="creditcard/debitcard" id="">Credit Card/ Debit Card </div>
+                      <div>  <input type="radio" name="Paytm/Gpay" id="">PayTm / Gpay </div>
+                     <div>   <input type="radio" name="cash" id="">Cash </div>
+                    </div>
+                </div>
+                <div class="custdet">
+                    <a href="index.html"><button class="btncust-submit">Make Payment</button> </a>
+                </div> -->
+                <br><br><br>
+                {% if messages %}
+                {% for displaydata in messages %}
+                <h3 style="color: aliceblue;">{{displaydata}}</h3>
+                {% endfor %}
+                {% endif %}
+            </form>
+
+        </div>
+        <br>
+    <!--    <footer>
+            <div class="center">
+                Copyright &copy; www.hosabelakuArt.com. All rights reserved!
+            </div>
+        </footer> -->
+    
+    
+    </section>
+
+
+</body>
+
+</html>

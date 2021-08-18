@@ -1,0 +1,417 @@
+/*CSS Reset */
+*{
+    margin: 0px;
+    padding: 0px;
+ /*font-family: 'Fondamento', cursive;
+  font-family: 'Langar', cursive;*/
+  font-family: 'Acme', sans-serif;
+
+}
+body{
+    background-color: hsl(0, 0%, 98%);
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/*Navigation bar */
+#navbar{
+    display: flex;                  /* nav contents moves to the row of logo */
+    align-items: center;            /* center alignment of nav elements in the nav block */
+    position: sticky;
+    top: 0px;
+}
+
+/* Logo and Image styling */
+#logo{
+    margin: 0px 40px;                /*logo and nav contents distance from left and top*/
+    height: 94px;
+}
+#logo img{    
+    margin: 0px 48px;
+}
+
+/*navigation bar :List styling */
+
+#navbar ul{
+    display: flex;                     /* nav contents will arrange in a single row */
+    padding: 0px 28px;
+    padding-right: 10px;
+}
+#navbar::before{
+    content: "";
+    background-color: rgb(4, 11, 113);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 94%;
+    width: 100%;
+    z-index: -2;                    /* Places div contents over bgcolor */
+    opacity: 0.85 ;                    /* dulls the bg color*/
+}
+#navbar ul li{
+        list-style: none;                    /*removes bullets*/
+        font-size: 1.2rem;
+        font-weight: bold;
+}
+#navbar ul li a{
+    color: #3f0e80;
+    color:white;
+    display: block;
+    padding: 3px 14px;
+    border-radius: 7px;
+    text-decoration: none;              /*removes underline*/
+}
+#navbar ul li a:hover{
+    color:rgb(233, 21, 162);
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 7px;
+    text-decoration: none;             
+}
+#navbar li a.active{
+    color:rgb(233, 21, 162);
+    background-color: rgb(255, 255, 255);
+}
+
+.btnsignup{        /*submit button*/
+    display: block;
+    padding: 3px 15px;
+    border:2px solid rgb(37, 39, 185);
+    color: white;
+    margin: 17px auto;
+    background-color:rgb(33, 31, 134);
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.form-group input{            /*form for login*/
+    text-align: center;    
+    padding: 2px 0px 0px;
+    border-radius: 5px;
+    margin: 6px auto;
+    width: 45%;
+}
+ .signup p{
+    font-size: 0.8rem;
+}
+#navbar button{
+    color: white;
+    padding: 3px 15px;
+    border:2px solid rgb(46, 6, 83);
+    background-color:rgb(46, 6, 83);
+    text-align: center;
+    cursor: pointer;
+    margin: 10px;
+    float: right;
+    margin-left: 150px;
+}
+.row {
+    --bs-gutter-x: -25.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -2);
+}
+
+#navbar button a{
+    text-decoration: none;
+    color: white;
+
+}
+#navbar button:hover{
+    display: block;
+    border:2px solid  rgb(233, 21, 162);
+    border-radius: 7px;
+    background-color: rgb(233, 21, 162);
+        
+}
+nav #cart-icon{
+    float: right;
+}
+.signup {             /*Create new account link*/
+    display: flex;
+    color: black;
+    border: 2px solid white;
+    background-color: white;
+    padding: 2px 5px;
+    margin: 10px ;
+    float: right;    
+}
+#cart-total{
+	display: block;
+	text-align: center;
+	color:#fff;
+	background-color: red;
+	width: 20px;
+	height: 25px;
+	border-radius: 50%;
+    font-size: 14px;
+    float: right;
+}
+
+/* Home section */
+#home{
+  /*  font-size: x-large; */
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 0px;
+    height: 752px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+   background: url('../Apics/bg6.jpg') no-repeat center center/cover;
+ /* background-color: blueviolet;*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    height: 100%;
+    width: 100%;
+    z-index: -2;                    /* Places div contents over bgcolor */
+    opacity: 0.8;           
+}
+#home h1{
+    text-align: center;
+}
+#home p{
+    color: #3f0e80;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px;  
+    padding-bottom: 10px;
+}
+#homebox{
+    margin: 10px;
+    display: flex;
+   
+}
+#homebox p{
+    color: #3f0e80;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 13px; 
+}
+#homebox .boxh{  
+    border: 2px solid #fffafd;
+    width: 404px;
+    padding: 25px 10px 10px 10px;
+    margin: 3px 7px;
+    border-radius: 29px;
+    background-color: rgb(197, 192, 192);
+}
+#homebox .boxh img{
+    display: block;
+    height: 150px;
+     margin: auto;
+     border-radius: 7px;
+     padding-bottom: 10px;
+    
+}
+
+
+
+.artworks-container::before{
+    content: "";
+   background: url('../Apics/bg8.jpg') no-repeat center/cover;
+    padding: 62px 0px 61px;                   
+    position: absolute;
+    top: 820px;
+    left: 0px;
+    height:58%;
+    width: 100%;
+    z-index: -2;                     /*    Places div contents over bgcolor */
+    opacity: 0.3; 
+
+   
+}
+#artworks{
+    margin:15px;
+    display: flex;
+    padding: 0px 10px ;
+    justify-content: center; 
+    align-items: center;
+ 
+    
+}
+#artworks p{
+    display:inline-block;
+    color: #3f0e80;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0px 28px 13px;
+
+    
+}
+
+/*Exhibition Section */
+#exhibition-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin:15px;
+    padding: 62px;
+    height: 415px;
+    justify-content: center;
+    align-items: center;
+}
+#exhibition-container::before{
+    content: "";
+    background: url('../Apics/exhi.jpg') no-repeat center center/cover;
+    position: absolute;
+    padding: 93px 0px 101px 30px;  
+    top: 50px;
+    left: -15px;
+    width: 100%;
+    height: 60%;
+    z-index: -1;
+    opacity: 0.85;
+}
+#Exhibition p{
+    color: #3f0e80;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+    
+}
+#exhibition-container button{
+    display: block;
+    color: white;
+    margin: auto;
+    cursor: pointer; 
+    padding: 5px 20px;
+    border:2px solid #cc1351;    
+    background-color:#cc1351;    
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
+
+/*Contact Section */
+#contact{
+    position: relative;  
+    margin:0px;
+    padding: 13px;
+    color: white;
+}
+#contact::before{
+    content: "";
+  /*  background: url('Apics/contact5.jpg') no-repeat center center/cover;*/
+  background-color:black;
+    position: absolute;
+    padding: 135px 15px 110px;  
+    top: 18px;
+    left: -28px;   
+    width: 100%;
+    height: 61%;
+    z-index: -1;
+    opacity: 0.9;
+   
+}
+#contact-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4px;
+    
+}
+#contact-box input,
+#contact-box textarea{
+    
+    width: 100%;
+    padding: 0.2rem;
+    border-radius: 7px;
+    font-size: 1rem;
+}
+#contact-box form{
+    width: 40%;
+    
+}
+#contact-box label{
+    font-size:1.1rem;
+}
+#contact-box button{        /*submit button*/
+    display: block;
+    padding: 7px 25px;
+    border:2px solid rgb(54, 185, 37);
+    color: white;
+    margin: 17px auto;
+    background-color:rgb(54, 185, 37);
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#contact img{
+    display: block;
+    margin: auto;
+    width: 450px;
+    height: 130px;
+    opacity: 0.9;
+}
+
+footer{
+    background: black;
+    padding: 3px 20px;
+    color: white;
+}
+
+
+/*Utility classes */
+.h-primary {
+    font-size: 2.7rem;
+    padding: 23px 0px 0px;
+    margin: 15px;
+    color: #cc1351;
+
+}
+#contact h1{
+    font-size: 2.7rem;
+    padding: 30px 0px 20px;
+    margin: 15px;
+    color: #cc1351;
+}
+#exhibition-container h1{
+    font-size: 2.7rem;
+    padding: 30px 0px 60px;
+    margin: 15px;
+    color: #cc1351;
+}
+.h-secondary center{
+    font-size: 2rem;
+    padding: 15px;
+     
+}
+.btn{                       /* Findme button in home page*/
+    padding: 6px 20px;
+    border:2px solid #cc1351;    
+    color: white;
+    margin: 17px;
+    background-color:#cc1351;    
+    font-size: 1.4rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
+
+
+
+
+

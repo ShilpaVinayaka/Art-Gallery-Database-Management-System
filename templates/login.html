@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In | Hosabelaku Art gallery | hosabelakuArt.com</title>
+    <link rel="shortcut icon" type="image" href="{% static 'Apics/title.jpg' %}">
+
+    <link rel="stylesheet" href="{% static 'Styles/login.css' %}">
+
+    <!--  <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet"> 
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">-->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <section id="login">
+
+        <div id="logo">
+            <!--Logo-->
+            <a href="signup.html"></a><img src="{% static 'Apics/loginlogo2.jpg' %}" alt="Hosabelaku Art Gallery"
+                    width="400px" height="400px">
+            </a>
+        </div>
+        <div class="login-container">
+            <form action="login.html" method="POST">
+                {% csrf_token %}
+
+                <div class="signingup"> <input type="text" name="username" id="" placeholder="Username" required></div>
+
+                <div class="signingup"> <input type="password" name="password" id="" placeholder="Password" required>
+                </div>
+
+                <div class="signingup">
+                    <a href="index.html"><button class="btnsignup">Login</button> </a>
+                </div>
+
+                <div>
+                    <p>New to Art Gallery?
+                        <a href="signup.html">Create new Account</a>
+                    </p>
+                </div>
+
+
+            </form>
+        </div>
+
+
+    </section>
+    {% for message in messages %}
+    <script href="#">
+        alert("{{ message }}")
+    </script>
+    {% endfor %}
+
+</body>
+
+</html>

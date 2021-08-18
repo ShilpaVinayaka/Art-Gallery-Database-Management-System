@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service</title>
+    <link rel="shortcut icon" type="image" href="{% static 'Apics/title.jpg' %}">
+
+    <link rel="stylesheet" href="{% static 'Styles/art.css' %}">
+    <link rel="stylesheet" href="{% static 'Styles/service.css' %}">
+
+        <!--  <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet"> 
+
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">-->
+
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <!--Logo-->
+            <img src="{% static 'Apics/logo2.jpg' %}" alt="Hombelaku Art Gallery" width="85px" height="85px">
+        </div>
+        <ul>
+            <!--Navbar Elements-->
+            <li class="item"><a href="index.html">Home</a></li>
+            <li class="item"><a href="artsales.html">Art Sales</a></li>
+            <li class="item"><a href="exhibition.html">Exhibition</a></li>
+            <li class="item"><a href="service.html">Customer Service</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <p id="cart-total">{{cartItems}}</p>
+
+            <a href="cart.html">
+               <img id="cart-icon" src="{% static 'Apics/cart.png' %}" height="40px" width="40px"> </a>
+       
+            <a href="login.html"> <button class="btn">Logout</button></a> 
+
+       </div>
+
+    </nav>
+    <hr>
+<!--    <section id ="gallery-details">
+        <div class="g-contact">
+            <h2>Contact Information</h2>
+            <table >
+                <tr>
+                    <th>Gallery Name</th>
+                    <th>Location</th>
+                    <th>Phone Number</th>
+                </tr>
+                {% for gallery in galleries %}
+                <tr>
+                    <td>{{gallery.g_name}}</td>
+                    <td>{{gallery.g_location}}</td>
+                    <td>{{gallery.g_phno}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </section>  -->
+    <section id="contact">
+        <h1 class="h-primary center"> File a Complaint</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name"> Name </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="Email"> Email </label>
+                    <input type="text" name="Email" id="Email" placeholder="Enter your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="Phone"> Phone Number </label>
+                    <input type="text" name="phone" id="phone" placeholder="Enter your Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="Message"> Message </label>
+                    <textarea name="Message" id="Message" placeholder="Enter your Message" required> </textarea>
+                </div>
+                <button class="btn">Submit</button>
+            </form>
+
+        </div>
+    </section>
+
+
+    <div>
+    </div>
+
+</body>
+</html>

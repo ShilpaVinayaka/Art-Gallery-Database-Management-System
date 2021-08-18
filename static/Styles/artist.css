@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Fondamento', cursive;
+    font-family: 'Acme', sans-serif;
+}
+
+#artist-details{
+    padding-left: 100px;
+    padding-right: 100px;
+    display: block;
+    margin: auto;
+}
+
+.nav-link{
+    padding: 40px ;
+    }
+
+    
+element.style {
+}
+.navbar-light .navbar-brand {
+    color: rgba(0,0,0,.9);
+    padding: 6px;
+    padding-left: 15px;
+}
+
+
+element.style {
+}
+#zg #zg_left_col2 {
+    float: left;
+    position: relative;
+    right: 210px;
+    width: 195px;
+    padding: 0 0 100px 0;
+}
+.artist-heading{
+    display: block;
+    margin: 10px auto;
+    padding: 15px;
+    background-color: #a906a7;
+    width: 100%;
+    padding-left: 15px;
+    border-radius: 10px;
+
+
+}
+.artist-heading a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+#artist-details .artistbox{
+    box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+
+    margin: 10px auto;
+    background-color: #e4cff3;
+    width: 95%;
+    padding: 40px;
+    border-radius:10px;
+    text-align: justify;
+  
+}
+.artistbox img{
+    height: 250px;
+    width: 300px;
+    padding-bottom: 10px;
+    margin-right: 1rem!important;
+}
+.artistbox{
+    display: flex;
+    align-items: flex-start;
+}
+.artistbox::before{
+
+    box-sizing: border-box;
+}
+.artistbox p{
+    font-size: 1.1rem;
+    padding: 8px;
+}

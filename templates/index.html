@@ -1,0 +1,234 @@
+{% load static %}
+{% static "Apics" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosabelaku Art gallery | hosabelakuArt.com</title>
+    <link rel="shortcut icon" type="image" href="{% static 'Apics/title.jpg' %}">
+
+    <link rel="stylesheet" href="{% static 'Styles/art.css' %}">
+
+    <link rel="stylesheet" media="screen and (max-width: 1153px)" href="{% static 'Styles/phone.css' %}">
+
+    <!--  <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet"> 
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+    <!-- Start WOWSlider.com HEAD section -->
+    <link rel="stylesheet" href="{% static 'engine1/style.css' %}" />
+    <script type="text/javascript" src="{% static 'engine1/jquery.js' %}"></script>
+    <!-- End WOWSlider.com HEAD section -->
+
+    <script type="text/javascript"> var user='{{request.user}}'
+
+        function getToken(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getToken('csrftoken');        
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <div id="logo">
+            <!--Logo-->
+            <img src=" {% static 'Apics/logo2.jpg' %}" alt="Hombelaku Art Gallery" width="90px" height="90px">
+        </div>
+        <ul>
+            <!--Navbar Elements-->
+            <li class="item"><a href="" class="">Home</a></li>
+            <li class="item"><a href="artsales.html">Art Sales</a></li>
+            <li class="item"><a href="exhibition.html">Exhibition</a></li>
+            <li class="item"><a href="service.html">Customer Service</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+
+        </ul>
+
+
+        <div class="form-inline my-2 my-lg-0">
+
+             <a href="cart.html">
+                <img id="cart-icon" src="{% static 'Apics/cart.png' %}" height="40px" width="40px"> </a>
+
+             <a href="login.html"> <button class="btn">Logout</button></a> 
+
+        </div>
+
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Hosabelaku Art Gallery</h1>
+        <p>Art is a diverse range of human activities involving the creation of visual, auditory or performing
+            artifacts.</p>
+        <p>Find your desired artworks that attract you!</p>
+        <a href="artsales.html"><button class="btn">Find Now</button></a>
+        <br>
+
+
+        <div id="homebox">
+            <div class="boxh">
+                <img src="{% static 'Apics/exhibi-home.jpg' %}" alt="">
+                <h2 class="h-secondary center">Exhibition</h2>
+                <p class="center">Display of art held at art galleries every year.</p>
+            </div>
+
+            <div class="boxh">
+                <!-- <img src="{% static 'Apics/gallery.jpg' %}" alt=""> -->
+                <img src="{% static 'Apics/gallery.jpg' %}" alt="">
+                <h2 class="h-secondary center">Art Gallery</h2>
+                <p>Display of all types of artwork for business purpose.</p>
+            </div>
+
+            <div class="boxh">
+                <img src="{% static 'Apics/artist.jpg' %}" alt="">
+                <h2 class="h-secondary center">Artists</h2>
+                <p>In every art of work, artist himself is present</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="artworks-container">
+        <h1 class="h-primary center"> Our ArtWorks </h1>
+        <div id="artworks">
+            <!--   <div class="box">
+                <img src="./Apics/lighthouse.jpg" alt="Paintings">
+                <h2 class="h-secondary center">Paintings</h2>
+            </div>
+            <div class="box">
+                <img src="./Apics/sculpture.jpg" alt="Sculptures">
+                <h2 class="h-secondary center">Sculpture</h2>
+            </div>
+            <div class="box">
+                <img src="./Apics/pottery.jpg" alt="Potteries">
+                <h2 class="h-secondary center">Potteries</h2>
+            </div>
+            <div class="box">
+                <img src="./Apics/fabric.jpg" alt="Fabric Painting">
+                <h2 class="h-secondary center">Fabric Paintings</h2>
+            </div>
+            <div class="box">
+                <img src="./Apics/muralpainting.jpg" alt="Mural painting">
+                <h2 class="h-secondary center">Mural Paintings</h2>
+            </div>
+            <div class="box">
+                <img src="./Apics/mosaic.jpg" alt="Mosaic Paintings">
+                <h2 class="h-secondary center">Mosaic Paintings</h2> -->
+            <!-- Start WOWSlider.com BODY section -->
+            <p>“Art enables us to find ourselves and lose ourselves at the same time.” ~Thomas Merton
+                <br><br>Hurry up and Explore Different types of artwork and buy what you find attractive!
+            </p>
+            <div id="wowslider-container1">
+                <div class="ws_images">
+                    <ul>
+                        <li><img src="{% static 'data1/images/lighthouse.jpg' %}" alt="Paintings" title="Paintings"
+                                id="wows1_0" />
+                        </li>
+                        <li><img src="{% static 'data1/images/sculpture.jpg' %}" alt="Sculpture" title="Sculpture"
+                                id="wows1_1" /></li>
+                        <li><img src="{% static 'data1/images/pottery.jpg' %}" alt="Potteris" title="Potteris"
+                                id="wows1_2" /></li>
+                        <li><img src="{% static 'data1/images/fabric.jpg' %}" alt="Fabric Painting"
+                                title="Fabric Painting" id="wows1_3" /></li>
+                        <li><a href="http://wowslider.net"><img src="{% static 'data1/images/muralpainting.jpg' %}"
+                                    alt="javascript image slider" title="Mural Paintings" id="wows1_4" /></a></li>
+                        <li><img src="{% static 'data1/images/mosaic.jpg' %}" alt="Mosaic Paintings"
+                                title="Mosaic Paintings" id="wows1_5" /></li>
+                    </ul>
+                </div>
+                <div class="ws_bullets">
+                    <div>
+                        <a href="#" title="Paintings"><span><img src="{% static 'data1/tooltips/lighthouse.jpg' %}"
+                                    alt="Paintings" />1</span></a>
+                        <a href="#" title="Sculpture"><span><img src="{% static 'data1/tooltips/sculpture.jpg' %}"
+                                    alt="Sculpture" />2</span></a>
+                        <a href="#" title="Potteris"><span><img src="{% static 'data1/tooltips/pottery.jpg' %}"
+                                    alt="Potteris" />3</span></a>
+                        <a href="#" title="Fabric Painting"><span><img src="{% static 'data1/tooltips/fabric.jpg' %}"
+                                    alt="Fabric Painting" />4</span></a>
+                        <a href="#" title="Mural Paintings"><span><img
+                                    src="{% static 'data1/tooltips/muralpainting.jpg' %}"
+                                    alt="Mural Paintings" />5</span></a>
+                        <a href="#" title="Mosaic Paintings"><span><img src="{% static 'data1/tooltips/mosaic.jpg' %}"
+                                    alt="Mosaic Paintings" />6</span></a>
+                    </div>
+                </div>
+                <div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">bootstrap
+                        carousel example</a> by WOWSlider.com v9.0</div>
+                <div class="ws_shadow"></div>
+            </div>
+            <script type="text/javascript" src="{% static 'engine1/wowslider.js' %}"></script>
+            <script type="text/javascript" src="{% static 'engine1/script.js' %}"></script>
+            <!-- End WOWSlider.com BODY section -->
+        </div>
+
+        </div>
+    </section>
+
+    <section id="exhibition-container">
+        <h1 class="h-primary center"> Exhibition</h1>
+        <div id="Exhibition">
+            <p>Know about the upcoming exhibitions. </p>
+            <p>Grab your tickets and enjoy the aesthetic joy of art world.</p>
+            <button class="btn">Book Now</button>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center"> Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name"> Name </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="Email"> Email </label>
+                    <input type="text" name="Email" id="Email" placeholder="Enter your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="Phone"> Phone Number </label>
+                    <input type="text" name="phone" id="phone" placeholder="Enter your Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="Message"> Message </label>
+                    <textarea name="Message" id="Message" placeholder="Enter your Message" required> </textarea>
+                </div>
+                <button class="btn">Submit</button>
+            </form>
+
+        </div>
+        <img src="{% static 'Apics/contact6.jpg' %}" alt="">
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.hosabelakuArt.com. All rights reserved!
+        </div>
+    </footer>
+
+</body>
+
+</html>
